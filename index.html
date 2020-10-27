@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JamSeeker</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index1.css">
+</head>
+
+<body>
+<div>
+<nav class="topnav">
+
+   <a class="jamSeekHeaderLogo" href=""><p>JamSeeker</p></a> 
+
+    <a id="homeNav" href="#home"><p>Home</p></a>
+
+    <a id="songListSave" href="">
+        <div class="savedSongsOuter">
+            <div class="savedSongsInner">
+                <p class="savedSongs">Saved Tracks</p>
+            </div>
+        </div>
+    </a>
+</nav>
+
+<div id="savedLyricsPage" class="hidden">
+    <ul id="addedSavedItems1" class="hidden"></ul>
+</div>
+
+<main class=songFinderMain>
+    <header id="jamSeek-logo">
+        <img src="https://i.imgur.com/XMZiEyK.png" alt="JamSeeker Main Logo on page">
+        <h1 class="hidden">JamSeeker - Search Lyrics and find the artist!</h1>
+        <h3>1. Search lyrics you have in your head</h3> <br>
+        <h3>2. Click on results to see lyrics</h3><br>
+        <h3>3. Use the addition button to add to your saved list</h3>
+    </header>
+        
+    <div class=songFinderForm>
+        <form id="js-form">
+            <input type='text' id="js-search-lyrics" placeholder="Search Lyrics Here!" required />
+            <div>
+                <button class="findButton" type="submit">Search Lyrics!</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="container-results">
+        <ul id="results" class="hidden"> 
+            <li class="results-area">
+                <div class="eachSongLyricArea">
+                    <div class="addedSavedItems">
+                    </div>
+                        <div class="artist-song">
+                            <p class="search-text">Track Title + Artist will be displayed</p>
+                        </div>
+                        <div class="lyricsShowGenius">
+                            <a href="" target="_blank">Genius Lyrics</a>
+                        </div>
+                </div>
+                    <div class="lyricsFrmArtist">
+                        <pre class="lyrics">Lyrical Display</pre>
+                    </div>
+                
+            </li>
+        </ul>
+        </div>
+    </main>
+</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
