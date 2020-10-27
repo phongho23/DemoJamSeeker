@@ -17,17 +17,16 @@ The + sign is a add song button to the saved songs feature in the nav bar.
 Saved Songs Feature
 
 About/Summary
+
 JamSeeker was designed to search user inputted lyrics to find music tracks that contain the inputted lyrics.  
 The app will provide a list of all matching lyrics to what the user has requested.  
 There is also a Save Song function for your own convenience.  
+
+Technologies Applied:  JavaScript, jQuery, HTML, CSS
 
 The app utilizes 2 APIs which are combined in functionality to find provide the service.  
 The Genius.com API (https://docs.genius.com/) and the Apiseeds API (https://apiseeds.com/documentation/lyrics).  
 Genius.com API was utilized for searching lyrics, the Apiseeds API was then used to display any matching lyrics.  
 
-Technologies Applied:  
-JavaScript
-jQuery
-HTML
-CSS
+
 
