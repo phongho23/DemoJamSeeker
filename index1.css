@@ -1,0 +1,294 @@
+@media screen and (min-width: 700px) {
+
+/*  general/main start  */
+.hidden {
+  display: none;
+}
+
+.songFinderMain {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.songFinderForm {
+  margin: 0;
+  padding: 0;
+}
+
+input[type="text"] {
+  padding: 5px;
+}
+
+div {
+  display: block;
+}
+
+#jamSeek-logo {
+  margin-left: auto;
+  margin-top: 14vw;
+  margin-right: auto;
+  margin-bottom: 5vw;
+  display: flexbox;
+  align-content: center;
+}
+
+img {
+  max-width:90%;
+}
+
+#results {
+  list-style: none;
+  color: white;
+}
+
+#js-search-lyrics {
+  margin: 10px;
+  font: 1.8vw;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(4, 18, 20);
+  background-size: auto;
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+
+/* title of the lyrics */
+
+.user-search-lyrics {
+    width: 60vw;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.5vw;
+    overflow: auto;
+}
+
+.user-search-lyrics:hover {
+    cursor: pointer;
+    color: red;
+}
+
+#container-results {
+    width: 100%;
+    margin-top: 3vw;
+}
+
+.artist-song {
+    overflow: auto;
+    color: white;
+    white-space: nowrap;
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* button searcher button */
+.findButton {
+  background-color: #53bd57; 
+  border: none;
+  border-radius: 12vw;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* button searcher button */
+
+.geniusButton {
+    background-color: #53bd57; 
+    border: none;
+    font-size: 1.4vw;
+    height: 3.5vw;
+    width: 7vw;
+    border-radius: 2vw;
+    color: white;
+    cursor: pointer; 
+}
+
+/* Top Navigation Start */
+
+.topnav {
+  display: flex;
+  background-color: #53bd57;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+}
+
+#search-term-quote {
+  color: #53bd57;
+}
+
+.topnav a {
+  display: flex;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 1.5vw;
+  margin: 0;
+}
+
+a:hover {
+  color: rgb(5, 5, 5);
+}
+
+/* Top Navigation End */
+
+/*  Lyrics Click */
+.lyricsFrmArtist {
+    margin-left: 3vw;
+    margin-top: .5vw;
+    border-radius: .5vw;
+    border: 1.1px solid #53bd57;
+    font-size: 2vw;
+}
+
+.artistResult {
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+}
+
+.resultsArea {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.eachSongLyricArea {
+    display: flex inline-block;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.lyricsShowGenius {
+    align-items: center;
+    text: black;
+    font-size: 2vw;
+    width: 8vw;
+    height: 3vw;
+    border: 3px #53bd57;
+    border-radius: 5vw:
+}
+/* end lyrics click */
+
+/* saved items start */
+#addedSavedItems1 {
+    display: flex inline-block;
+    flex-direction: column;
+    align-items: center;
+}
+
+.savedLikes {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+/* Button Add liked song */
+.addedSavedItems {
+    background-image: url('https://i.imgur.com/ziYqk0C.jpg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    width: 3.6vw;
+    height: 3.6vw;
+}
+
+.addedSavedItems:hover {
+    background-size: 95%;
+    cursor: pointer;
+}
+
+.deleteSaveItem {
+    background-image: url('https://i.imgur.com/67JFw2R.png');
+    background-size: 75%;
+    width: 7vw;
+    height: 7vw;
+    background-repeat: no-repeat;
+}
+
+.deleteSaveItem:hover {
+    background-size: 80%;
+    cursor: pointer;
+}
+
+.albumPic {
+    background-color: none;
+    width: 100%;
+    height: 100%;
+}
+
+.albumPhoto {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.saveListArtist {
+    font-size: 2vw;
+    text-align: left;
+    width: 64%;
+}
+
+#savedLyricsPage {
+    position: fixed;
+    width: 80%;
+    height: 70%;
+    padding-top: 6.5vw;
+    background-color: rgb(4, 18, 20);
+    overflow: auto;
+    box-sizing: border-box;
+    border: 3px solid #53bd57;
+    border-radius: 2vw;
+}
+
+.savedSongsOuter {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.savedSongs {
+    font-size: 1.5vw;
+    color: white;
+    text-decoration: none;
+    white-space: pre-wrap;
+}
+
+.savedSongs:hover {
+  color: black;
+}
+
+.lyrics {
+    overflow: auto;
+    font-size: 14px;
+    text-align: left;
+}
+/* saved items end */
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color:     rgb(4, 18, 20);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(4, 18, 20);
+    border-radius: 6px;
+}
+}
