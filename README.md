@@ -24,9 +24,9 @@ There is also a Save Song function for your own convenience.
 
 Technologies Applied:  JavaScript, jQuery, HTML, CSS
 
-The app utilizes 2 APIs which are combined in functionality to find provide the service.  
-The Genius.com API (https://docs.genius.com/) and the Apiseeds API (https://apiseeds.com/documentation/lyrics).  
-Genius.com API was utilized for searching lyrics, the Apiseeds API was then used to display any matching lyrics.  
+The app utilizes 2 APIs which are combined in functionality.  
+The APIs used were the Genius.com API (https://docs.genius.com/) and the Apiseeds API (https://apiseeds.com/documentation/lyrics).  
+Genius.com API was utilized for searching user inputted lyrics, the Apiseeds API was then used to display any matching lyrics.  
 
 
 
