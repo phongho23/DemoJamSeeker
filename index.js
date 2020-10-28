@@ -34,7 +34,7 @@ function formatLyrics(resultsAPI2) {
     return resultsAPI2.result.track.text;
 };
 
-//response when no lyrics are found
+
 function noLyricsFound() {
     setTimeout(function () {
         $('.artistResult').not(':has(.lyricsFrmArtist)').append(`
@@ -46,13 +46,13 @@ function noLyricsFound() {
     );  
 };
 
-//join them with the '&' after URI component after using the encodeURIComponent process
+
 function formatQueryParams(params) {
     const queryItems = Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`);
     return queryItems.join('&');
 };
 
-//appends relevant html to show results
+
 function displayResultsArtist(responseJson) {
     $('#results').empty();
     for (let i = 0; (i < responseJson.response.hits.length) && (i <= 14); i++) {    
@@ -83,7 +83,7 @@ function displayResultsArtist(responseJson) {
 };
 
 
-//to search lyrics user inputted and limit to 15 results
+
 function getInfo(searchLyrics) {
     const params = {
         q: searchLyrics,
@@ -118,21 +118,21 @@ $(function savedSongsToggle() {
     });
 });
 
-//hide saved item page
+
 $(function savedSongsHideToggle() {
     $('main').click(function () {
         $('#savedLyricsPage').addClass('hidden');
     });
 });
 
-//delete saved item once added
+
 $(function deleteSavedSongsFrmList() {
     $('#addedSavedItems1').on('click', '.deleteSaveItem', function (event) { 
         $(this).parent().remove();
     });
 });
 
-//display the saved item within the saved item page
+
 function savedSongItem(trackName, albumCover) {
     return `<li class="savedLikes">
                 <div class="albumPic">
@@ -145,7 +145,7 @@ function savedSongItem(trackName, albumCover) {
             </li>`
 }
 
-//option to add songs to saved item page
+
 function selectSave(responseJson) {
     $('#addedSaveditems1').empty();
     for (let i = 0; i < responseJson.response.hits.length && i <= 14; i++) {
@@ -156,7 +156,7 @@ function selectSave(responseJson) {
     };
 };
 
-//toggle home item
+
 $(function homeToggle() {
     $('#homeNav').click(function (event) {
         event.preventDefault();
@@ -164,7 +164,7 @@ $(function homeToggle() {
     });
 });
 
-//toggle the lyrics when you click on the track name / artist
+
 $(function toggleLyricDisplay() {
     $('#results').on('click', '.artist-song', function (event) {
         const wantedLyrics = $(this)
