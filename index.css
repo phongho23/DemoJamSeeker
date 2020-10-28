@@ -1,4 +1,3 @@
-
 @media screen and (max-width: 699px) {
 
 /*  general/main start  */
@@ -18,7 +17,7 @@
 }
 
 input[type="text"] {
-padding: 5px;
+  padding: 5px;
 }
 
 div {
@@ -30,7 +29,6 @@ div {
   margin-top: 14vw;
   margin-right: auto;
   margin-bottom: 5vw;
-  display: flexbox;
   align-content: center;
 }
 
@@ -69,14 +67,12 @@ body {
 
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 3.5px rgb(4, 18, 20);
-	-webkit-box-shadow: inset 0 0 3.5px rgb(4, 18, 20);
     background-color: rgb(4, 18, 20);
     border-radius: 6px;
 }
 
 
 /* search results section */
-/* title of the lyrics */
 .user-search-lyrics {
     transition-property: background-color;
     transition-duration: 0.2s;
@@ -96,7 +92,7 @@ body {
 
 #container-results {
     width: 100%;
-    margin top: 3vw;
+    margin-top: 3vw;
 }
 
 .artist-song {
@@ -124,7 +120,6 @@ ul {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: flex inline-block;
   font-size: 16px;
   cursor: pointer;
 }
@@ -193,7 +188,7 @@ a:hover {
 }
 
 .eachSongLyricArea {
-    display: flex inline-block;
+
     align-items: center;
     margin-top: auto;
     margin-bottom: auto;
@@ -201,16 +196,15 @@ a:hover {
 
 .lyricsShowGenius {
     align-items: center;
-    text: black;
     font-size: 1.5vw;
     width: 15vw;
-    border-radius: 5vw:
+    border-radius: 5vw;
 }
 /* end lyrics click */
 
 /* saved items */
 #addedSavedItems1 {
-    display: flex inline-block;
+
     flex-direction: column;
     align-items: center;
 }
@@ -248,7 +242,6 @@ a:hover {
 }
 
 .albumPic {
-    background-color: none;
     width: 100%;
     height: 100%;
 }
