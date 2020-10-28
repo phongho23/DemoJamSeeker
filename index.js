@@ -5,7 +5,6 @@ const api2KEY = 'eCZHXQqgx4peFlrrilNN9iDJTyRBRGg6og5XsOL50mTbD69tnEtHSiFftKhWrF0
 const apiKeyGenius = 'qAkEc2vvpHy6e0yxrKlIvK1scxr3HFEIaBCUnXZr-ZpwL8pLuTLb25aRk9YB6752';
 
 //main process user request
-
 function getAPILyrics(resultsGenius) {
     const api2URLnew = api2URL + `${resultsGenius.result.primary_artist.name}/${resultsGenius.result.title}?apikey=` + api2KEY;
     fetch(api2URLnew)
@@ -30,10 +29,12 @@ function displayLyrics(api2response) {
     });
 };
 
+//formats the lyrics into preferred format  
 function formatLyrics(resultsAPI2) {
     return resultsAPI2.result.track.text;
 };
 
+//response when no lyrics are found
 function noLyricsFound() {
     setTimeout(function () {
         $('.artistResult').not(':has(.lyricsFrmArtist)').append(`
@@ -45,12 +46,13 @@ function noLyricsFound() {
     );  
 };
 
-//join them with the '&' after URI component.  
+//join them with the '&' after URI component after using the encodeURIComponent process
 function formatQueryParams(params) {
     const queryItems = Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`);
     return queryItems.join('&');
 };
 
+//appends relevant html to show results
 function displayResultsArtist(responseJson) {
     $('#results').empty();
     for (let i = 0; (i < responseJson.response.hits.length) && (i <= 14); i++) {    
@@ -80,6 +82,8 @@ function displayResultsArtist(responseJson) {
     $('#results').removeClass('hidden');  //to reveal the search items
 };
 
+
+//to search lyrics user inputted and limit to 15 results
 function getInfo(searchLyrics) {
     const params = {
         q: searchLyrics,
@@ -114,7 +118,7 @@ $(function savedSongsToggle() {
     });
 });
 
-//close saved item page when clicking anywhere in the "main" area of HTML
+//hide saved item page
 $(function savedSongsHideToggle() {
     $('main').click(function () {
         $('#savedLyricsPage').addClass('hidden');
@@ -128,7 +132,7 @@ $(function deleteSavedSongsFrmList() {
     });
 });
 
-//to display the saved item item within the saved item page
+//display the saved item within the saved item page
 function savedSongItem(trackName, albumCover) {
     return `<li class="savedLikes">
                 <div class="albumPic">
@@ -141,7 +145,7 @@ function savedSongItem(trackName, albumCover) {
             </li>`
 }
 
-//option to add songs to saved saved item page
+//option to add songs to saved item page
 function selectSave(responseJson) {
     $('#addedSaveditems1').empty();
     for (let i = 0; i < responseJson.response.hits.length && i <= 14; i++) {
@@ -171,9 +175,8 @@ $(function toggleLyricDisplay() {
         restLyrics.parents('.artistResult').find('.lyricsShowGenius').addClass('hidden');
     });
 });
-//ALL TOGGLE ITEMS END
 
-//WATCH FORM
+//Watch form
 function watchForm() {
     $('form').submit(event => {
         event.preventDefault();
