@@ -290,6 +290,7 @@ a:hover {
   overflow: auto;
   font-size: 3vw;
   text-align: left;
+  white-space: pre-wrap;
 }
 /* saved items Items end */
 
