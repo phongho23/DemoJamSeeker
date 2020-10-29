@@ -3,17 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JamSeeker</title>
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="index1.css">
 </head>
 
 <body>
 <div>
-<nav class="topnav">
+<nav class="topnav" aria-label="Nav">
    <a class="jamSeekHeaderLogo" href=""><p>JamSeeker</p></a> 
     <a id="homeNav" href="#home"><p>Home</p></a>
     <a id="songListSave" href="">
@@ -40,13 +39,15 @@
         
     <div class=songFinderForm>
         <form id="js-form">
+            <label for="js-search-lyrics" id="search-term-quote">Type in the lyrics you want to search!</label>
+                <br>
             <input type='text' id="js-search-lyrics" placeholder="Search Lyrics Here!" required />
+                <br>
             <div>
                 <button class="findButton" type="submit">Search Lyrics!</button>
             </div>
         </form>
     </div>
-
     <div id="container-results">
         <ul id="results" class="hidden"> 
             <li class="results-area">
@@ -60,9 +61,9 @@
                             <a href="" target="_blank">Genius Lyrics</a>
                         </div>
                 </div>
-                  <div class="lyricsFrmArtist">
-                    <pre class="lyrics">Lyrical Display</pre>
-                  </div>
+                    <div class="lyricsFrmArtist">
+                        <pre class="lyrics">Lyrical Display</pre>
+                    </div>
             </li>
         </ul>
         </div>
